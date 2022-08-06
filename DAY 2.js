@@ -124,23 +124,26 @@ console.log(challenged.repeat(2))
 
 //1. using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up. ' by John Holmes teaches us to help one another.
 console.log('The quote There is no exercise better for the heart than reaching down and lifting people up.  by John Holmes teaches us to help one another.')
-
+let yu=[1,]
+console.log(yu.slice(2))
 //2. using console.log() print out the following quote by Mother Teresa: "Love is not patronizing and charity isn't about pity. it is about love. Charity and love are the same-- with charity you give love, so don't just give money but reach out your hand instead."
 console.log('quote by Mother Teresa: Love is not patronizing and charity isnt about pity. it is about love. Charity and love are the same-- with charity you give love, so dont just give money but reach out your hand instead.')
-
+ let h='6.90988'
+ console.log(h.split())
 //3. check if typeof '10' is exactly equal to 10. if not make it exactly equal.
-let num=10
+let num="10"
 let numInt= Number(num)
-console.log(numInt)
+console.log(typeof(numInt)=== typeof(10))
 
 //4. check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10
-let num1=9.8
-let parseFloat=Number(Math.floor(Math.ceil(num1)))
-console.log(parseFloat)
+let num1= parseFloat( "9.8")
+let ruth=Number(Math.round(num1))
+console.log(ruth=== 10)
 
 //5. check if 'on' is found in both python and jargon
 let language="python"
 let language2="jargon"
+console.log(language.includes("on")&& language2.includes("on"))
 console.log(language.endsWith("on") )
 console.log(language2.endsWith("on") )
 
@@ -166,7 +169,7 @@ console.log(Math.floor(Math.random()*256))
 //10. Access the 'JavaScript' string character using a random number.
 let character_string='JavaScript'
 let characterLength= character_string.length
-console.log(character_string.charAt(Math.floor(Math.random('JavaScript')*characterLength)))
+console.log(character_string.charAt(Math.floor(Math.random(  )*characterLength)))
 
 /*11. use console.log() and escape characters to print the following pattern.
  2 1 2 4 8
@@ -213,10 +216,15 @@ console.log(sent.match('because'))
 
 /*3. clean the following text and find the most frequent word (hint, use replace and regular expresssions).
 const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%ore interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfjavaScript &is al@so $the $resu@lt of &love& of tea&ching'*/
-let sente='%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%ore interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfjavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+let sente='%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%ore interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30# Days &Of javaScript &is al@so $the $resu@lt of &love& of tea&ching'
 console.log(sente.replace(/[?$%!@#&;]/gi, ""))
 
 console.log(sente.replace(/[^a-z0-9. ]/gi, ""))
+
+let sen =sente.replace(/[^a-z0-9. ]/gi, "").split(' ')
+console.log(sen)
+
+
 
 
 //4.calculate the total annual incomeofthe person by extracting the numbers from the followinh text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
@@ -230,8 +238,10 @@ let arr=[5000, 10000, 15000]
 let first= arr[0]
 let second= arr[1]
 let third = arr[2]
+console.log(((+arr[0]*12) + +arr[1] + (+arr[2]*12)))
 
 console.log(first + second + third)
+
 
 /*let sum=0;
 for(let i =0; i<3; i++){
